@@ -133,26 +133,3 @@ button:focus {
 	height: 30px;
 }
 
-@keyframes spooky {
-  0% {
-    opacity: 0;
-    transform: translateY(calc(-50px - 50%))
-  }
-  
-  100% {
-      transform: scale(1);
-  }
-}
-
-#container {
-  transition: 50ms all ease;
-  z-index: 1;
-  position: fixed;
-  text-align: center;
-  font-weight: bolder;
-  letter-spacing: 1.5px;
-}
-
-#container p {
-    font-size: 2em;
-}

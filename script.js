@@ -59,31 +59,3 @@ function randomColor() {
 
 
 
-let ghost_btn = document.querySelector('.ghost_btn'),
-    ghosts = Math.floor(Math.random() * 500);
-
-const RandomColor = () => {
- return `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`; 
-} 
-
-const summonGhosts = () => {
-  
-  document.querySelector('#container p').style.opacity = 0;
-  document.querySelector('#container p').style.display = "none";
-  
-  document.querySelector('#container .buttons').style.opacity = 0;
-  document.querySelector('#container .buttons').style.display = "none";
-  
-  for(let index=0; index < ghosts; index++) {
-        let ghost = document.createElement('div');
-
-        ghost.style.color = RandomColor(); 
-        ghost.style.opacity = Math.random() * 1;
-        ghost.className = `fas fa fa-${Math.floor(Math.random() * 6)}x fa-ghost`;
-        ghost.style.animation = `${Math.floor(Math.random() * 50)}s spooky alternate infinite`;
-        
-        document.querySelector('#container').append(ghost);
-    }
-};
-
-ghost_btn.addEventListener('click', summonGhosts);
